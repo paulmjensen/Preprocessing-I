@@ -57,3 +57,67 @@ html, body {
     height: 100%;
 }
 
+/*------Begin My Work Here-----------*/
+
+@import url('https://fonts.googleapis.com/css?family=Manjari|Roboto+Mono&display=swap');
+
+@paragraph-font:'Roboto Mono', monospace;
+@header-font:'Manjari', sans-serif;
+
+.boldlinemixer(){
+	border-bottom: 2px solid grey;
+}
+
+header{
+	.boldlinemixer();
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	nav{
+		display:flex;
+		justify-content: space-around;
+		font-family: @header-font;
+		margin-top: 1%;
+		
+	}
+	.Name{
+		font-size: 30px;
+		font-family: @header-font;
+		display: flex;
+		justify-content: center;
+		padding: 10px;
+	}
+	
+		a{
+			text-decoration: none;
+
+	} /* this closes the anchor tags */
+} /*this closes the header tag */
+
+/* --------Start of Intro Section---------*/
+.IntroClass{
+	.boldlinemixer();
+	width: 100%;
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 1%;
+	h2{
+		font-family: @header-font;
+		font-size: 20px;
+	}
+		p{
+			font-family: @paragraph-font;
+			font-size: 12px;
+		}
+} /* closes the IntroClass tag */
+
+/* ----------Start of Main Content------*/
+.main-content{
+	
+}
+/* ----------Start of Footer-----------*/
