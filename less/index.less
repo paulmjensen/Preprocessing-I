@@ -57,23 +57,32 @@ html, body {
     height: 100%;
 }
 
-/*------Begin My Work Here-----------*/
+/*------------------Begin My Work Here----------------------*/
 
+  
+	/* variables and google fonts */
+	
 @import url('https://fonts.googleapis.com/css?family=Manjari|Roboto+Mono&display=swap');
 
 @paragraph-font:'Roboto Mono', monospace;
 @header-font:'Manjari', sans-serif;
+@header-color: rgb(233, 233, 231);
 
+/* Two Mix ins */
 .boldlinemixer(){
 	border-bottom: 2px solid grey;
+}
+.widthmixin(){
+	width:100%;
 }
 
 header{
 	.boldlinemixer();
-	width: 100%;
+	.widthmixin();
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	background: @header-color;
 
 	nav{
 		display:flex;
@@ -99,7 +108,7 @@ header{
 /* --------Start of Intro Section---------*/
 .IntroClass{
 	.boldlinemixer();
-	width: 100%;
+	.widthmixin();
 	display:flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -118,6 +127,30 @@ header{
 
 /* ----------Start of Main Content------*/
 .main-content{
-	
+	.boldlinemixer();
+	.widthmixin();
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 1%;
+	margin-top: 10px;
+
+	h2{
+		font-family: @header-font;
+		font-size: 20px;
+	}
+	p{
+		font-family: @paragraph-font;
+		font-size: 12px;
+	}
 }
+
 /* ----------Start of Footer-----------*/
+footer{
+	
+	font-family: @paragraph-font;
+	font-size: 12px;
+	display:flex;
+	justify-content: center;
+	align-content: flex-end;
+}
