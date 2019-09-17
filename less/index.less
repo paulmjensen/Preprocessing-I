@@ -18,7 +18,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -57,3 +57,109 @@ html, body {
     height: 100%;
 }
 
+/*------------------Begin My Work Here----------------------*/
+
+  
+	/* variables and google fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Manjari|Roboto+Mono&display=swap');
+
+@paragraph-font:'Roboto Mono', monospace;
+@header-font:'Manjari', sans-serif;
+@header-color: rgb(233, 233, 231);
+
+/* Two Mix ins */
+.boldlinemixer(){
+	border-bottom: 2px solid grey;
+}
+.widthmixin(){
+	width:100%;
+}
+
+header{
+	.boldlinemixer();
+	.widthmixin();
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: @header-color;
+
+	nav{
+		display:flex;
+		justify-content: space-around;
+		font-family: @header-font;
+		margin-top: 1%;
+		
+	}
+	.Name{
+		font-size: 30px;
+		font-family: @header-font;
+		display: flex;
+		justify-content: center;
+		padding: 10px;
+	}
+	
+		a{
+			text-decoration: none;
+			font-size: 12px;
+
+	} /* this closes the anchor tags */
+} /*this closes the header tag */
+
+/* --------Start of Intro Section---------*/
+.IntroClass{
+	.boldlinemixer();
+	.widthmixin();
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 1%;
+	h2{
+		font-family: @header-font;
+		font-size: 20px;
+	}
+		p{
+			font-family: @paragraph-font;
+			font-size: 12px;
+		}
+} /* closes the IntroClass tag */
+
+/* ----------Start of Main Content------*/
+.main-content{
+	.boldlinemixer();
+	.widthmixin();
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 1%;
+	margin-top: 10px;
+
+	h2{
+		font-family: @header-font;
+		font-size: 20px;
+	}
+	p{
+		font-family: @paragraph-font;
+		font-size: 12px;
+	}
+}
+
+/* ----------Start of Footer-----------*/
+footer{
+	
+	font-family: @paragraph-font;
+	font-size: 12px;
+	display:flex;
+	justify-content: center;
+	align-content: flex-end;
+}
+
+/*-------------Mobile View----------------*/
+
+@media screen and (max-width: 500px){
+	header nav a{
+		font-size: 9px;	
+	}
+}
